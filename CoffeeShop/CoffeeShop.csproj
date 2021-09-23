@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10A51E0C-FA6B-42A4-8C54-8064B3985675}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CoffeeShop</RootNamespace>
+    <AssemblyName>CoffeeShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spire.License, Version=1.3.7.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.5.8.16\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.8.16.2046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.5.8.16\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CafeAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CafeAbout.Designer.cs">
+      <DependentUpon>CafeAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet.cs">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeActiveOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeActiveOrders.Designer.cs">
+      <DependentUpon>EmployeeActiveOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeBookSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeBookSearch.Designer.cs">
+      <DependentUpon>EmployeeBookSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeControlsAircon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeControlsAircon.Designer.cs">
+      <DependentUpon>EmployeeControlsAircon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeControlsLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeControlsLight.Designer.cs">
+      <DependentUpon>EmployeeControlsLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeHomePage.Designer.cs">
+      <DependentUpon>EmployeeHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeOrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeOrderHistory.Designer.cs">
+      <DependentUpon>EmployeeOrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeWebsite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeWebsite.Designer.cs">
+      <DependentUpon>EmployeeWebsite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterPrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterPrices.Designer.cs">
+      <DependentUpon>PrinterPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13.Designer.cs">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15.Designer.cs">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Photocopier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Photocopier.Designer.cs">
+      <DependentUpon>Photocopier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerBase.Designer.cs">
+      <DependentUpon>CustomerBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LightBtn.Designer.cs">
+      <DependentUpon>LightBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewsText.Designer.cs">
+      <DependentUpon>NewsText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Thermometer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Thermometer.Designer.cs">
+      <DependentUpon>Thermometer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirconBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirconBtn.Designer.cs">
+      <DependentUpon>AirconBtn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Website.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Website.Designer.cs">
+      <DependentUpon>Website.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CafeAbout.resx">
+      <DependentUpon>CafeAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeActiveOrders.resx">
+      <DependentUpon>EmployeeActiveOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeBookSearch.resx">
+      <DependentUpon>EmployeeBookSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeControlsAircon.resx">
+      <DependentUpon>EmployeeControlsAircon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeControlsLight.resx">
+      <DependentUpon>EmployeeControlsLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeHomePage.resx">
+      <DependentUpon>EmployeeHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeOrderHistory.resx">
+      <DependentUpon>EmployeeOrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeWebsite.resx">
+      <DependentUpon>EmployeeWebsite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterPrices.resx">
+      <DependentUpon>PrinterPrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15.resx">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Photocopier.resx">
+      <DependentUpon>Photocopier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerBase.resx">
+      <DependentUpon>CustomerBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightBtn.resx">
+      <DependentUpon>LightBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsText.resx">
+      <DependentUpon>NewsText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thermometer.resx">
+      <DependentUpon>Thermometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirconBtn.resx">
+      <DependentUpon>AirconBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Website.resx">
+      <DependentUpon>Website.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsc">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet1.xss">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet2.xsc">
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet2.xss">
+      <DependentUpon>Database1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet11.xsc">
+      <DependentUpon>OrdersDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet11.xss">
+      <DependentUpon>OrdersDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet2.xsc">
+      <DependentUpon>OrdersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet2.xss">
+      <DependentUpon>OrdersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet21.xsc">
+      <DependentUpon>OrdersDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet21.xss">
+      <DependentUpon>OrdersDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet3.xsc">
+      <DependentUpon>OrdersDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet3.xss">
+      <DependentUpon>OrdersDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet4.xsc">
+      <DependentUpon>OrdersDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet4.xss">
+      <DependentUpon>OrdersDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet5.xsc">
+      <DependentUpon>OrdersDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet5.xss">
+      <DependentUpon>OrdersDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet6.xsc">
+      <DependentUpon>OrdersDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet6.xss">
+      <DependentUpon>OrdersDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\debug\coffee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Orders.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="bin\images\mein-deal-m0KaCYXjJjw-unsplash.jpg" />
+    <Content Include="Database1.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\light-bulb.gif" />
+    <None Include="Resources\fan.gif" />
+    <None Include="Resources\study-rooms-upper.jpg" />
+    <None Include="Resources\mein-deal-m0KaCYXjJjw-unsplash.jpg" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\denny-muller-XNTC5G1W3Xs-unsplash.jpg" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\print-scan-fax-in-branch.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
